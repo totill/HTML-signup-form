@@ -1,0 +1,157 @@
+:root {
+    --red: hsl(0, 100%, 74%) ;
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%); 
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+    background-image: url(./images/bg-intro-desktop.png);
+    background-repeat: repeat;
+    background-color: var(--red);
+    /* height: 100vh; */
+    font-family: "Hanken Grotesk", sans-serif;
+    color: white;
+    font-size: 16px;
+    
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.attribution {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 10;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* width: min(1000px, 90vw); */
+    min-height: 650px;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 0.9;
+}
+
+/* p {
+
+} */
+
+
+.learning-text {
+    width: min(500px, 90vw);
+    /* margin-right: 40px; */
+}
+
+.tables {
+    width: min(500px, 90vw);
+}
+
+.free-trial {
+    background-color: var(--blue);
+    border-radius: 10px;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    box-shadow: 0 7px rgba(0, 0, 0, 0.15);
+}
+
+.signup-form {
+    background-color: white;
+    color: var(--dark-blue);
+    border-radius: 10px;
+
+    padding: 30px;
+
+    box-shadow: 0 7px rgba(0, 0, 0, 0.15);
+}
+
+.disclaimer {
+    color: var(--grayish-blue);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--grayish-blue);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid var(--grayish-blue);
+}
+
+button {
+  background-color: var(--green);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+    
+  box-shadow: 0 3px hsl(154, 65%, 40%);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    body {
+    background-image: url(./images/bg-intro-mobile.png);
+    flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 90vw;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+
+    .learning-text {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .free-trial {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+}
