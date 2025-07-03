@@ -6,6 +6,10 @@
     --grayish-blue: hsl(246, 25%, 77%);
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(./images/bg-intro-desktop.png);
     background-repeat: repeat;
@@ -70,7 +74,7 @@ h1 {
     box-shadow: 0 7px rgba(0, 0, 0, 0.15);
 }
 
-.signup-form {
+.form {
     background-color: white;
     color: var(--dark-blue);
     border-radius: 10px;
@@ -97,14 +101,40 @@ input[type=text], input[type=email], input[type=password] {
   box-sizing: border-box;
 }
 
-.input-field {
+input::placeholder {
+    font-weight: 600;
+    font-size: 0.875rem; 
+}
+
+.form_input {
   width: 100%;
   padding: 10px;
   outline: none;
+
+  position: relative;
 }
 
-.input-field:focus {
-    border: 2px solid var(--grayish-blue);
+.form_input img {
+    display: none;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.25rem;
+}
+
+.form_input.error img {
+  display: block;
+}
+
+.form_input small {
+    display: block;
+    color: var(--red);
+    text-align: right;
+    font-style: italic;
+    display: none;
+}
+
+.form_input.error small {
+  display: block;
 }
 
 button {
@@ -123,6 +153,7 @@ button {
 
 button:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
